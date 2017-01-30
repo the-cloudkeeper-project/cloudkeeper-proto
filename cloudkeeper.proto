@@ -2,7 +2,7 @@ syntax = "proto3";
 
 import public "google/protobuf/empty.proto";
 
-package cloudkeeper.grpc;
+package cloudkeeper_grpc;
 
 message Appliance {
   string identifier = 1;

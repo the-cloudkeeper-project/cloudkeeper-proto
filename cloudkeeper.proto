@@ -47,29 +47,13 @@ message ImageListIdentifier {
   string image_list_identifier = 1;
 }
 
-message Status {
-  enum Code {
-    SUCCESS = 0;
-    ERROR = 1;
-    ERROR_APPLIANCE_NOT_FOUND = 2;
-    ERROR_APPLIANCE_TRANSFER = 3;
-    ERROR_AUTHENTICATION = 4;
-    ERROR_USER_NOT_AUTHORIZED = 5;
-    ERROR_RESOURCE_NOT_FOUND = 6;
-    ERROR_RESOURCE_RETRIEVAL = 7;
-    ERROR_RESOURCE_STATE = 8;
-  }
-  Code code = 1;
-  string message = 2;
-}
-
 service Communicator {
-  rpc PreAction(google.protobuf.Empty) returns (Status) {}
-  rpc PostAction(google.protobuf.Empty) returns (Status) {}
-  rpc AddAppliance(Appliance) returns (Status) {}
-  rpc UpdateAppliance(Appliance) returns (Status) {}
-  rpc RemoveAppliance(Appliance) returns (Status) {}
-  rpc RemoveImageList(ImageListIdentifier) returns (Status) {}
+  rpc PreAction(google.protobuf.Empty) returns (google.protobuf.Empty) {}
+  rpc PostAction(google.protobuf.Empty) returns (google.protobuf.Empty) {}
+  rpc AddAppliance(Appliance) returns (google.protobuf.Empty) {}
+  rpc UpdateAppliance(Appliance) returns (google.protobuf.Empty) {}
+  rpc RemoveAppliance(Appliance) returns (google.protobuf.Empty) {}
+  rpc RemoveImageList(ImageListIdentifier) returns (google.protobuf.Empty) {}
   rpc ImageLists(google.protobuf.Empty) returns (stream ImageListIdentifier) {}
   rpc Appliances(ImageListIdentifier) returns (stream Appliance) {}
 }

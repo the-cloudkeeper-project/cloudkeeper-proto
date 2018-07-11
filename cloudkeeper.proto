@@ -18,8 +18,10 @@ message Appliance {
   string vo = 11;
   int64 expiration_date = 12;
   string image_list_identifier = 13;
-  Image image = 14;
-  map<string, string> attributes = 15;
+  string base_mpuri = 14;
+  string appid = 15;
+  string digest = 16;
+  Image image = 17;
 }
 
 message Image {
@@ -41,6 +43,7 @@ message Image {
   int64 size = 6;
   string username = 7;
   string password = 8;
+  string digest = 9;
 }
 
 message ImageListIdentifier {

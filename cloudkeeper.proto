@@ -55,6 +55,7 @@ service Communicator {
   rpc PostAction(google.protobuf.Empty) returns (google.protobuf.Empty) {}
   rpc AddAppliance(Appliance) returns (google.protobuf.Empty) {}
   rpc UpdateAppliance(Appliance) returns (google.protobuf.Empty) {}
+  rpc UpdateApplianceMetadata(Appliance) returns (google.protobuf.Empty) {}
   rpc RemoveAppliance(Appliance) returns (google.protobuf.Empty) {}
   rpc RemoveImageList(ImageListIdentifier) returns (google.protobuf.Empty) {}
   rpc ImageLists(google.protobuf.Empty) returns (stream ImageListIdentifier) {}

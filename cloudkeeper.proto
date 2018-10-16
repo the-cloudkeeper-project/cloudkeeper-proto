@@ -60,4 +60,5 @@ service Communicator {
   rpc RemoveImageList(ImageListIdentifier) returns (google.protobuf.Empty) {}
   rpc ImageLists(google.protobuf.Empty) returns (stream ImageListIdentifier) {}
   rpc Appliances(ImageListIdentifier) returns (stream Appliance) {}
+  rpc RemoveExpiredAppliances(google.protobuf.Empty) returns (google.protobuf.Empty) {}
 }

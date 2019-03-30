@@ -29,21 +29,43 @@ message Image {
     LOCAL = 0;
     REMOTE = 1;
   }
+  message DiskFormat {
+    enum Format {
+      AKI = 0;
+      AMI = 1;
+      ARI = 2;
+      ISO = 3;
+      PLOOP = 4;
+      QCOW2 = 5;
+      RAW = 6;
+      VDI = 7;
+      VHD = 8;
+      VHDX = 9;
+      VMDK = 10;
+    }
+  }
+  message ContainerFormat {
+    enum Format {
+      AKI = 0;
+      AMI = 1;
+      ARI = 2;
+      BARE = 3;
+      DOCKE  = 4;
+      OVA = 5;
+      OVF = 6;
+    }
+  }
+
   Mode mode = 1;
   string location = 2;
-  enum Format {
-    RAW = 0;
-    OVA = 1;
-    QCOW2 = 2;
-    VMDK = 3;
-  }
-  Format format = 3;
+  DiskFormat.Format container_format = 3;
   string uri = 4;
   string checksum = 5;
   int64 size = 6;
   string username = 7;
   string password = 8;
   string digest = 9;
+  DiskFormat.Format disk_format = 10;
 }
 
 message ImageListIdentifier {

@@ -58,7 +58,7 @@ message Image {
 
   Mode mode = 1;
   string location = 2;
-  DiskFormat.Format container_format = 3;
+  ContainerFormat.Format container_format = 3;
   string uri = 4;
   string checksum = 5;
   int64 size = 6;

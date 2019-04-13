@@ -36,6 +36,20 @@ message Image {
     OVA = 1;
     QCOW2 = 2;
     VMDK = 3;
+    AKI = 4;
+    ISO = 5;
+    QCOW2 = 6;
+    RAW = 7;
+    VDI = 8;
+    VHD = 9;
+    VHDX = 10;
+    VMDK = 11;
+    AMI = 12;
+    ARI = 13;
+    BARE = 14;
+    DOCKER = 15;
+    OVA = 16;
+    OVF = 17;
   }
   Format format = 3;
   string uri = 4;
@@ -44,6 +58,7 @@ message Image {
   string username = 7;
   string password = 8;
   string digest = 9;
+  Format container_format = 10;
 }
 
 message ImageListIdentifier {

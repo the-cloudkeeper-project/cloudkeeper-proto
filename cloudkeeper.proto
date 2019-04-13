@@ -38,18 +38,14 @@ message Image {
     VMDK = 3;
     AKI = 4;
     ISO = 5;
-    QCOW2 = 6;
-    RAW = 7;
-    VDI = 8;
-    VHD = 9;
-    VHDX = 10;
-    VMDK = 11;
-    AMI = 12;
-    ARI = 13;
-    BARE = 14;
-    DOCKER = 15;
-    OVA = 16;
-    OVF = 17;
+    VDI = 6;
+    VHD = 7;
+    VHDX = 8;
+    AMI = 9;
+    ARI = 10;
+    BARE = 11;
+    DOCKER = 12;
+    OVF = 13;
   }
   Format format = 3;
   string uri = 4;

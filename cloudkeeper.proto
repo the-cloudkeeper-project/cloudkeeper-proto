@@ -21,7 +21,8 @@ message Appliance {
   string base_mpuri = 14;
   string appid = 15;
   string digest = 16;
-  Image image = 17;
+  string checksum = 17;
+  Image image = 18;
 }
 
 message Image {
